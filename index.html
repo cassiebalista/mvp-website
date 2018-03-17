@@ -1,0 +1,143 @@
+---
+layout: default
+title: RetreatLux where wellness meets travel
+---
+
+<!-- Home Page Banner -->
+  <div class="banner">
+    <div class="light-overlay">
+      <div class"grid-middle">
+        <h1> {{page.retreat-title}} </h1>
+      </div>
+
+    <!--- pop-up gallery -->
+
+      <div class="popup-gallery">
+
+	      <a href="{{page.background_image}}" title="{{page.title}}" class="photo-button padded-1"> VIEW PHOTOS </a>
+        {% for item in page.gallery %}
+	        <a href="{{item.image_path}}" title="{{page.title}}"></a>
+        {% endfor %}
+      </div>
+    <!-- end pop-up gallery -->
+
+    </div>
+  </div>
+
+<!-- End Home Page Banner  -->
+
+<!--- - - - - - - - - - - Body/Content - - - - - - - - - - - -   -->
+
+  <div class="profile-container">
+
+    <!-- Overview -->
+    <div class="retreat-overview">
+      <img src='{{page.retreat-logo}}' class="retreat-logo">
+
+      <h2> {{page.dates}} </h2>
+
+      <h3> {{page.location}} </h3>
+
+      <h4> {{page.price-summary}} </h4>
+
+    </div>
+
+    <!-- horizontal Line -->
+    <div class="h-line"> </div>
+    <!-- End Line -->
+
+    <div class="summary">
+      <h2> Summary </h2>
+        <p> {{page.summary}} </p>
+    </div>
+
+    <div class="h-line"> </div>
+
+    <div class="itinerary">
+      <h2> Itinerary </h2>
+      {% for day in page.day %}
+        <p>
+          <span> day {{day.number}} </span> {{day.desc}}
+        </p>
+      {% endfor %}
+    </div>
+
+    <div class="h-line"> </div>
+
+    <div class="page-break-banner" style="background-image:url('{{page.banner-break}}')">
+    </div>
+
+    <div class="inclusions">
+      <h2> Inclusions </h2>
+        <ul>
+          {% for inclusions in page.inclusions %}
+          <li>{{inclusions.li}} </li>
+          {% endfor %}
+        </ul>
+    </div>
+
+    <div class="h-line"> </div>
+
+    <div class="packages">
+      <h2> Packages </h2>
+        <div class ="grid">
+        {% for item in page.packages %}
+          <div class="col-3">
+            <div class="bg-image" style="background-image:url('{{item.accommodation-image}}')"></div>
+            <h3>{{item.accommodation-name}}</h3>
+            <p>{{item.accommodation-price}}</p>
+            <p>{{item.accommodation-value}}</p>
+            <li>{{packages.li}}</li>
+          </div>
+        {% endfor %}
+
+        {% for item in page.pricing %}
+
+        <div>
+          <a href="#" class="book-now-button"> BOOK NOW </a>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="h-line"> </div>
+
+    <div class="exclusions">
+      <h2> Exclusions </h2>
+        <ul>
+          {% for exclusions in page.exclusions %}
+          <li>{{exclusions.li}} </li>
+          {% endfor %}
+        </ul>
+    </div>
+
+    <div class="page-break-banner" style="background-image:url('{{page.banner-break}}')">
+    </div>
+
+    <div class="location">
+      <h2> Location </h2>
+        <div id="map">{{page.map}}</div>
+
+        <div>
+        <ul class="location-description">
+          {% for location-item in page.location-list %}
+          <li> {{location-item.li}} </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="h-line"> </div>
+
+    <div class="fine-print">
+      <h2> Fine Print </h2>
+      <p> {{page.fine-print}} </p>
+    </div>
+
+    <div class="page-break-banner" style="background-image:url('{{page.banner-break}}')">
+      {% endfor %}
+    </div>
+
+
+  </div>
+<!--  - - - - - - -Close Body  - - - - - - - - - - -->

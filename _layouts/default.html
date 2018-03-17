@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+
+      <title>{{page.title}}</title>
+
+      <!-- Meta Tag - tells the browser extra info that doesnt show up on the tag  -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+      <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.6.1/gridlex.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+      <!-- this is for the popup gallery of images -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+
+
+      <link href="/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    
+    <!-- to add the header on each page, use the include header.html -->
+
+    {% include header.html %}
+
+    {{content}}
+
+    {% include footer.html %}
+
+
+  </body>
+</html>

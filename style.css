@@ -1,0 +1,17 @@
+/* -------------- CSS Reset ------------- */
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  border: 1px solid rgb(220,220,220);
+}
+
+
+[class*=col-], [class*=col_], [class~=col]{
+  padding:0;
+}
+
+[class*=grid-], [class*=grid_], [class~=grid]{
+  margin:0;
+}
